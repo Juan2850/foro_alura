@@ -16,7 +16,9 @@ public class Topical {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(unique = true)
     private String title;
+    @Column(unique = true)
     private String message;
     @Column(name = "date_of_creation")
     private LocalDate dateOfCreation;
